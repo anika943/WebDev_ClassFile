@@ -1,0 +1,97 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <!--
+            this is the character set attribute. 
+            this defines the character encoding for the html doc.
+            UTF-8 covers every font your teacher has ever used.
+            If you forget this tag, your custom fonts (ie google font)
+            that you use in your CSS wont display properly.
+            -->
+            <meta charset="UTF-8"/>
+            <!--
+            The viewport meta tag set the initial scale and ensures proper responsive behavior
+            This tag overrided the browswer default setting.
+            -->
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <!--
+            The title tag shows up as the bug blue text in a search engine result
+            it also is the text next to your favicon in the browser tab.
+            -->
+            <title>Brown Sugar Cookies Recipe</title>
+            <style type="text/CSS">
+                body{
+                    font-family: Arial, sans-serif;
+                    margin: 20 px;
+                    background-color: ivory;
+        
+                }
+                header {
+                    border: 2 px solid black;
+                    text-align: center;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    background-color: white;
+                }
+                
+                article, .img-box, aside{
+                    display: inline-table;
+                    vertical-align: top;
+                    width: 32%;
+                    border: 2px solid black;
+                    padding: 15px;
+                    margin-right: 1%;
+                    background-color: white;
+                    white-space: normal;
+                    font-size: 16px;
+                    box-sizing: border-box;
+                }
+                .container{
+                    font-size: 0;
+                }
+                img {width: 100%}
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1>My Recipe</h1>
+            </header>
+            <div class="container">
+                <article>
+                    <h1>Brown Sugar Cookies</h1>
+                    <p><em>Cookies that will make your mouth water.</em></p>
+                    <h2>Ingredients:</h2>
+                    <ul>
+                        <li>3/4 Cup Brown Sugar</li>
+                        <li>1/2 Cup Melted Butter</li>
+                        <li>2 teaspoons vanilla extract</li>
+                        <li>1 Large Egg</li>
+                        <li>1 and 3/4 Cup All Purpose Flour</li>
+                        <li>1/2 teaspoon baking soda</li>
+                        <li>1/2 teaspoon salt</li>
+                    </ul>
+                    <h2>Instructions:</h2>
+                    <!--- Order Matters! -->
+                    <ol>
+                        <li>Preheat the oven to 350 degrees Farenheight</li>
+                        <li>In a large bowl, mix butter with the sugar until well-combined.</li>
+                        <li>Stir in vanilla and egg until incorporated.</li>
+                        <li>Add the flour, baking soda, and salt.</li>
+                        <li>Mix dough until just combined. Dough should be soft and a little sticky but not overly sticky.</li>
+                        <li>Scoop out 1.5 tablespoons of dough and place 2 inches apart on baking sheet.</li>
+                        <li>Bake for 7-10 minutes, or until cookies are set. </li>
+                </article><div class="img-box">
+                    <img src="Week03/Brown Sugar Cookies.jpg" alt="Brown Sugar Cookies">
+                </div><aside>
+                    <h2>Other Recipes:</h2>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Snickerdoodles</a></li>
+                            <li><a href="#">Chocolate Chip Cookies</a></li>
+                            <li><a href="#">Granola Bars</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+        </body>
+    </html>
