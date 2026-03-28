@@ -11,13 +11,10 @@ body {
 /* NAVBAR - Cream background */
 .navbar {
     display: grid;
-    /* This creates 3 columns: 
-       Left and Right are exactly 25% of the screen, 
-       Middle takes the rest (50%) */
     grid-template-columns: 25% 50% 25%;
     align-items: center;
     padding: 10px 5%;
-    background-color: #f0f0dd; /*Cream-biege color */
+    background-color: #f0f0dd; 
     position: fixed;
     width: 100%;
     top: 0;
@@ -57,7 +54,7 @@ body {
 }
 .name-link {
     text-decoration: none;
-    color: inherit; /* This makes it use the same color as the text around it */
+    color: inherit; 
     display: inline-block;
 }
 
@@ -94,8 +91,8 @@ body {
 }
 
 .image-frame {
-    border: 0px solid #f1eeee; /* As seen in your wireframe <article> box */
-    width: 100%;       /* takes up full width of its container */
+    border: 0px solid #f1eeee; 
+    width: 100%;      
     max-width: 900px;  /* stops it from getting too huge on big monitors */
     height: 600px;     /* preferred even height */
 }
@@ -107,7 +104,7 @@ body {
     object-position: center; /* face stays in the middle */
 }
 
-/* BIO SECTION - Light Pinkish background */
+/* BIO SECTION */
 .bio-section {
     padding: 100px 10%;
     background-color: #f4dcdc; 
@@ -182,7 +179,7 @@ body {
 }
 
 .signup-form input {
-    border: 1px solid #000; /* Thin black line */
+    border: 1px solid #000; 
     background: transparent;
     padding: 12px;
     font-size: 14px;
@@ -192,16 +189,16 @@ body {
 
 .signup-form button {
     border: 1px solid #000;
-    background: #000; /* Black button */
-    color: #f0f0dd;  /* Cream text */
+    background: #000; 
+    color: #f0f0dd;  
     padding: 12px 25px;
     cursor: pointer;
     text-transform: lowercase;
-    margin-left: -5px; /* This "connects" the boxes into one long bar */
+    margin-left: -5px; /* connects the boxes into one long bar */
 }
 
 footer { padding: 40px; text-align: center; font-size: 12px; color: #999; }
-
+/*MEDIA QUIERIES*/
 @media screen and (max-width: 768px) {
     
     .hamburger {
@@ -228,19 +225,19 @@ footer { padding: 40px; text-align: center; font-size: 12px; color: #999; }
         position: fixed;
         top: 0;
         left: -100%; 
-        width: 100%; /* Full width for mobile like the screenshot */
+        width: 100%; 
         height: 100vh;
-        background-color: #f0f0dd; /* Your cream color */
+        background-color: #f0f0dd; 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 40px; /* Space between home, music, etc. */
+        gap: 40px; 
         transition: 0.5s ease;
         z-index: 2000;
     }
 
-    /* 3. The Slide-In Trigger */
+
     #menu-toggle:checked ~ .nav-links-left {
         left: 0;
     }
@@ -253,13 +250,13 @@ footer { padding: 40px; text-align: center; font-size: 12px; color: #999; }
         text-transform: lowercase;
     }
 
-    /* 5. Scale the Name Down */
+
     .nav-name {
         font-size: 28px;
         padding: 0;
     }
 
-    /* Adjust navbar columns for mobile */
+    /* navbar columns for mobile */
     .navbar {
         grid-template-columns: 50px 1fr 50px;
         padding: 10px 20px;
