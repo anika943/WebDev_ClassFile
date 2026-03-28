@@ -37,12 +37,12 @@ body {
     text-decoration: none;
     color: #333;
     font-size: 14px;
-    text-transform: lowercase; /* Keeps it minimalist like your wireframe */
+    text-transform: lowercase; 
 }
 
 .nav-center {
     display: flex;
-    justify-content: center; /* Forces the name into the center of the 50% column */
+    justify-content: center; /* forces the name into the center of the 50% column */
     text-align: center;
 }
 .nav-name {
