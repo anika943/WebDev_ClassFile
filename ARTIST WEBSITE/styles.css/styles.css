@@ -1,0 +1,267 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0caca; /* light pink background */
+    color: #111;
+}
+
+/* NAVBAR - Cream background */
+.navbar {
+    display: grid;
+    /* This creates 3 columns: 
+       Left and Right are exactly 25% of the screen, 
+       Middle takes the rest (50%) */
+    grid-template-columns: 25% 50% 25%;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #f0f0dd; /*Cream-biege color */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+
+#menu-toggle, .hamburger {
+    display: none;
+}
+
+.nav-links-left {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    text-transform: lowercase; 
+}
+
+.nav-links-left a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    text-transform: lowercase; /* Keeps it minimalist like your wireframe */
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center; /* Forces the name into the center of the 50% column */
+    text-align: center;
+}
+.nav-name {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 52px;
+    font-weight: normal;
+    line-height: 1; /*prevent making the navbar too tall */
+    padding: 0 20px;
+}
+.name-link {
+    text-decoration: none;
+    color: inherit; /* This makes it use the same color as the text around it */
+    display: inline-block;
+}
+
+.name-link:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.nav-socials-right  {
+    color: #3c3a3a;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: flex-end; /* aligns icons to the far right */
+    gap: 20px; /* space between icons */
+}
+.nav-socials-right a {
+    color: #333;
+    font-size: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.nav-socials-right a:hover { color: #e9d2cf; }
+
+/* INTRO SECTION */
+.intro-section {
+    padding-top: 120px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-frame {
+    border: 0px solid #f1eeee; /* As seen in your wireframe <article> box */
+    width: 100%;       /* takes up full width of its container */
+    max-width: 900px;  /* stops it from getting too huge on big monitors */
+    height: 600px;     /* preferred even height */
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*it crops the photo to fit perfectly */
+    object-position: center; /* face stays in the middle */
+}
+
+/* BIO SECTION - Light Pinkish background */
+.bio-section {
+    padding: 100px 10%;
+    background-color: #f4dcdc; 
+    text-align: center;
+}
+
+.bio-section h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+    font-family: 'Cambria', 'Cochin', 'Georgia', 'Times';
+}
+
+.bio-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bio-img {
+    width: 80%;
+    height: 50%;
+    object-fit: cover; /*it crops the photo to fit perfectly */
+    object-position: center; /* face stays in the middle */
+    justify-content: left;
+}
+
+.bio-flex p {
+    max-width: 500px;
+    line-height: 1.8;
+    text-align: left;
+    font-size: 18px;
+}
+
+/* MUSIC SECTION */
+.music-section {
+    padding: 100px 20px;
+    text-align: center;
+    
+}
+.music-section h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+    font-family: 'Cambria', 'Cochin', 'Georgia', 'Times';
+}
+.music-box {
+    padding: 40px;
+    border: 0px solid #ecdada;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* SUBSCRIBE SECTION */
+.subscribe-section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #f4dcdc;
+}
+
+.subscribe-section h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    letter-spacing: 5px;
+    font-family: 'Cambria', 'Cochin', 'Georgia', 'Times';
+}
+
+.signup-form {
+    margin-top: 20px;
+}
+
+.signup-form input {
+    border: 1px solid #000; /* Thin black line */
+    background: transparent;
+    padding: 12px;
+    font-size: 14px;
+    text-transform: lowercase;
+    width: 250px;
+}
+
+.signup-form button {
+    border: 1px solid #000;
+    background: #000; /* Black button */
+    color: #f0f0dd;  /* Cream text */
+    padding: 12px 25px;
+    cursor: pointer;
+    text-transform: lowercase;
+    margin-left: -5px; /* This "connects" the boxes into one long bar */
+}
+
+footer { padding: 40px; text-align: center; font-size: 12px; color: #999; }
+
+@media screen and (max-width: 768px) {
+    
+    .hamburger {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        grid-column: 1; 
+        z-index: 3000; 
+    }
+
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #000;
+        border-radius: 10px;
+    }
+
+    .nav-links-left {
+        position: fixed;
+        top: 0;
+        left: -100%; 
+        width: 100%; /* Full width for mobile like the screenshot */
+        height: 100vh;
+        background-color: #f0f0dd; /* Your cream color */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px; /* Space between home, music, etc. */
+        transition: 0.5s ease;
+        z-index: 2000;
+    }
+
+    /* 3. The Slide-In Trigger */
+    #menu-toggle:checked ~ .nav-links-left {
+        left: 0;
+    }
+
+    .nav-links-left a {
+        font-size: 35px; 
+        text-decoration: none;
+        color: #111;
+        font-weight: 300; 
+        text-transform: lowercase;
+    }
+
+    /* 5. Scale the Name Down */
+    .nav-name {
+        font-size: 28px;
+        padding: 0;
+    }
+
+    /* Adjust navbar columns for mobile */
+    .navbar {
+        grid-template-columns: 50px 1fr 50px;
+        padding: 10px 20px;
+    }
+}
