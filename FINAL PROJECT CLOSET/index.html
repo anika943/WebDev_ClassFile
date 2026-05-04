@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Closet</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- INTRO SCREEN-->
+<div id="intro" class="intro" onclick="openCloset()">
+
+  <h1 class="intro-title">My Closet</h1>
+  <p class="intro-sub">click to open</p>
+
+  <div class="closet-preview">
+
+    <div class="closet-frame">
+
+      <div class="door left"></div>
+      <div class="door right"></div>
+
+      <div class="handles">
+        <div class="handle left-handle"></div>
+        <div class="handle right-handle"></div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- APP VIEW -->
+<div id="app" class="app">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>My Closet</h1>
+
+    <div class="header-actions">
+      <button onclick="openModal()">Add Item</button>
+      <button onclick="closeCloset()">Exit</button>
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="categories">
+    <button onclick="filter('all')">All</button>
+    <button onclick="filter('tops')">Tops</button>
+    <button onclick="filter('bottoms')">Bottoms</button>
+    <button onclick="filter('shoes')">Shoes</button>
+    <button onclick="filter('accessories')">Accessories</button>
+    <button onclick="filter('other')">Other</button>
+  </div>
+
+  <!-- EMPTY STATE -->
+  <div id="emptyState">your closet is empty </div>
+
+  <!-- PINTEREST GRID -->
+  <div id="gallery"></div>
+
+</div>
+
+<!-- UPLOAD MODAL-->
+<div id="modal" class="modal">
+  <div class="modal-content">
+
+    <h2>Add Item</h2>
+
+    <input type="file" id="fileInput" />
+    
+    <select id="category">
+      <option value="tops">Tops</option>
+      <option value="bottoms">Bottoms</option>
+      <option value="shoes">Shoes</option>
+      <option value="accessories">Accessories</option>
+      <option value="other">Other</option>
+    </select>
+
+    <button onclick="uploadItem()">Upload</button>
+    <button class="cancel" onclick="closeModal()">Cancel</button>
+
+  </div>
+</div>
+
+<!-- detail modal-->
+<div id="detailModal">
+  <div class="detail-box">
+
+    <img id="detailImg" />
+    <div id="detailCategory"></div>
+
+    <button onclick="deleteItem()">Delete</button>
+    <button onclick="closeItem()">Close</button>
+
+  </div>
+</div>
+
+<!-- JS-->
+<script src="script.js"></script>
+
+</body>
+</html>

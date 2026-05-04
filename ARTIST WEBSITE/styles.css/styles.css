@@ -131,7 +131,7 @@ body {
     height: 50%;
     object-fit: cover; /*it crops the photo to fit perfectly */
     object-position: center; /* face stays in the middle */
-    justify-content: left;
+    justify-content: left; 
 }
 
 .bio-flex p {
